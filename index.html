@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Azca</title>
+  </head>
+  <body class="font-sans">
+    <nav class="bg-[#B4AC42] shadow-md py-1">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#home">
+              <img
+                src="assets/images/azca logo.PNG"
+                alt="Logo"
+                class="h-10 sm:h-12 lg:h-12 rounded-full"
+              />
+            </a>
+          </div>
+
+          <!-- Links -->
+          <div class="hidden md:flex space-x-8 font-bold">
+            <a href="#about" class="hover:text-[#2e2e2e]">About</a>
+            <a href="#members" class="hover:text-[#2e2e2e]">Members</a>
+            <a href="#news" class="hover:text-[#2e2e2e]">News</a>
+            <a href="#contact" class="hover:text-[#2e2e2e]">Contact</a>
+          </div>
+
+          <!-- Sign In/Sign Up Buttons -->
+          <div class="hidden md:flex space-x-4">
+            <button
+              class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949]"
+            >
+              Sign In
+            </button>
+            <button
+              class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
+            >
+              Sign Up
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-neutral-light focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+          <a
+            href="#about"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light"
+            >About</a
+          >
+          <a
+            href="#members"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light"
+            >Members</a
+          >
+          <a
+            href="#news"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light"
+            >News</a
+          >
+          <a
+            href="#contact"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light"
+            >Contact</a
+          >
+          <div class="flex flex-col space-y-2 mt-4">
+            <button
+              class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949]"
+            >
+              Sign In
+            </button>
+            <button
+              class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
+            >
+              Sign Up
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Heading Section -->
+    <section
+      class="min-h-screen flex items-center justify-center bg-cover bg-center"
+    >
+      <div class="text-center px-4 p-6 rounded-md">
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-light text-[#2e2e2e]"
+        >
+          Alzaiem Alazhari Computer Association
+        </h1>
+        <br />
+        <h1
+          class="flex justify-center items-center text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-light text-[#b4ac42]"
+        >
+          "AZCA"
+        </h1>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="bg-[#f5f5f4] py-12 px-6">
+      <h2
+        class="text-center text-[#694b2a] lg:text-6xl text-4xl font-bold opacity-75 mb-8"
+      >
+        About Us
+      </h2>
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
+      >
+        <!-- Text Content -->
+        <div>
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2e2e2e] mb-4"
+          >
+            It's Started 2012
+          </h2>
+          <p class="text-gray-700 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
+            vitae ipsum euismod, pellentesque risus sit amet, pharetra felis.
+            Fusce nec lectus non tortor sodales malesuada id ac enim. Vivamus
+            commodo eros et dui placerat, eget tincidunt justo auctor. Etiam
+            dictum magna eu libero ultricies mollis.
+          </p>
+        </div>
+
+        <!-- Image Content -->
+        <div>
+          <img
+            src="assets/images/Mazen.png"
+            alt="AZCA Founder"
+            class="rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Members Section -->
+    <section id="members" class="bg-gray-200 py-12 px-6">
+      <h2
+        class="text-center text-[#7b6861] lg:text-6xl text-4xl font-bold opacity-75 mb-8"
+      >
+        Members
+      </h2>
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Member Cards -->
+        <!-- Member 1 -->
+        <div
+          class="bg-[#B4AC42] rounded-lg shadow-md p-6 transform transition duration-300 hover:scale-105 hover:shadow-lg text-[#2e2e2e]"
+        >
+          <img
+            src="assets/images/Mazen.png"
+            alt="Member 1"
+            class="rounded-t-lg w-full mb-4"
+          />
+          <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 1</h3>
+          <p class="text-gray-700">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Member 1 is
+            known for their innovative solutions and dedication to the team.
+          </p>
+        </div>
+
+        <!-- Member 2 -->
+        <div
+          class="bg-[#B4AC42] rounded-lg shadow-md p-6 transform transition duration-300 hover:scale-105 hover:shadow-lg text-[#2e2e2e]"
+        >
+          <img
+            src="assets/images/Mazen.png"
+            alt="Member 2"
+            class="rounded-t-lg w-full mb-4"
+          />
+          <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 2</h3>
+          <p class="text-gray-700">
+            Quisque vitae ipsum euismod, pellentesque risus sit amet, pharetra
+            felis. Member 2 has a strong background in leadership and
+            management.
+          </p>
+        </div>
+
+        <!-- Member 3 -->
+        <div
+          class="bg-[#B4AC42] rounded-lg shadow-md p-6 transform transition duration-300 hover:scale-105 hover:shadow-lg text-[#2e2e2e]"
+        >
+          <img
+            src="assets/images/Mazen.png"
+            alt="Member 3"
+            class="rounded-t-lg w-full mb-4"
+          />
+          <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 3</h3>
+          <p class="text-gray-700">
+            Fusce nec lectus non tortor sodales malesuada id ac enim. Member 3
+            contributes expertise in coding and technical support.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="bg-[#f5f5f4] py-12 px-6">
+      <h2
+        class="text-center text-[#694b2a] lg:text-6xl text-4xl font-bold opacity-75 mb-8"
+      >
+        News
+      </h2>
+      <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-6">
+        <!-- Main News Item -->
+        <div class="col-span-2 bg-white rounded-lg shadow-md p-6">
+          <img
+            src="assets/images/event.jpeg"
+            alt="Main News"
+            class="rounded-t-lg w-full mb-4"
+          />
+          <h3 class="text-2xl font-bold mb-2">Main Headline News</h3>
+          <p class="text-sm text-gray-600 mb-4">Date: January 20, 2025</p>
+          <p class="text-gray-700 leading-relaxed">
+            This is the main news headline that features the most important
+            update or event. It is given more prominence due to its significance
+            or popularity. The description is longer and provides a
+            comprehensive overview of the story.
+          </p>
+        </div>
+
+        <!-- Smaller News Items -->
+        <div
+          class="col-span-2 md:col-span-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 gap-6"
+        >
+          <!-- Small News Item 1 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <img
+              src="assets/images/azca.jpg"
+              alt="News 1"
+              class="rounded-t-lg w-full mb-3 h-1/2"
+            />
+            <h4 class="text-lg font-semibold mb-2">News Title 1</h4>
+            <p class="text-sm text-gray-600 mb-2">Date: February 10, 2025</p>
+            <p class="text-gray-700">
+              This is a brief description of the first smaller news item.
+            </p>
+          </div>
+
+          <!-- Small News Item 2 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <img
+              src="assets/images/news.jpg"
+              alt="News 2"
+              class="rounded-t-lg w-full mb-3"
+            />
+            <h4 class="text-lg font-semibold mb-2">News Title 2</h4>
+            <p class="text-sm text-gray-600 mb-2">Date: March 15, 2025</p>
+            <p class="text-gray-700">
+              This is a brief description of the second smaller news item.
+            </p>
+          </div>
+
+          <!-- Small News Item 3 -->
+          <div class="bg-white rounded-lg shadow-md p-4">
+            <img
+              src="assets/images/news.jpg"
+              alt="News 3"
+              class="rounded-t-lg w-full mb-3"
+            />
+            <h4 class="text-lg font-semibold mb-2">News Title 3</h4>
+            <p class="text-sm text-gray-600 mb-2">Date: April 5, 2025</p>
+            <p class="text-gray-700">
+              This is a brief description of the third smaller news item.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
