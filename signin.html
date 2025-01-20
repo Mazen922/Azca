@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - AZCA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              azcayellow: "#a48a1e",
+              Gray: "#b3b4b4",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+  <body
+    class="bg-[#f5f5f4] flex justify-center items-center min-h-screen text-white"
+  >
+    <div class="bg-white text-gray-800 p-8 rounded shadow-md max-w-sm w-full">
+      <h2 class="text-2xl font-bold mb-6 text-center text-[#2e2e2e]">
+        Signin to AZCA
+      </h2>
+      <form>
+        <div class="mb-4">
+          <label for="user" class="block text-sm font-medium">User name</label>
+          <input
+            type="username"
+            id="user"
+            placeholder="Enter your Username"
+            class="mt-1 block w-full px-3 py-2 border border-Gray rounded-lg shadow-sm focus:outline-none focus:ring-red focus:border-azcayellow text-[#2e2e2e]"
+          />
+        </div>
+        <div class="mb-4">
+          <label for="password" class="block text-sm font-medium"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            class="mt-1 block w-full px-3 py-2 border border-Gray rounded-lg shadow-sm focus:outline-none focus:ring-azcayellow focus:border-azcayellow text-[#2e2e2e]"
+          />
+        </div>
+        <button
+          type="submit"
+          class="w-full bg-azcayellow text-black py-2 px-4 rounded transition-colors hover:bg-[#bca31d]"
+        >
+          Login
+        </button>
+      </form>
+      <p class="text-sm mt-4 text-center">
+        Don't have an account?
+        <a href="signup.html" class="text-azcayellow hover:underline font-bold"
+          >Sign up</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
