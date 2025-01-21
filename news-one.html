@@ -5,29 +5,124 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>News Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Ensure smooth transition for menu toggle */
+      #mobile-menu {
+        transition: max-height 0.3s ease;
+      }
+    </style>
   </head>
   <body class="bg-gray-100 font-sans">
     <!-- Navbar -->
-    <header class="bg-white shadow-md">
+    <nav class="bg-[#B4AC42] shadow-md py-1">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <nav class="flex justify-between items-center py-4">
-          <a href="index.html" class="text-xl font-bold text-[#7b6861]">AZCA</a>
-          <ul class="flex space-x-6 text-sm font-medium text-gray-600">
-            <li><a href="index.html" class="hover:text-gray-900">Home</a></li>
-            <li><a href="#about" class="hover:text-gray-900">About</a></li>
-            <li><a href="#contact" class="hover:text-gray-900">Contact</a></li>
-            <li><a href="#members" class="hover:text-gray-900">Members</a></li>
-            <li><a href="#news" class="hover:text-gray-900">News</a></li>
-          </ul>
-        </nav>
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="index.html">
+              <img
+                src="assets/images/azca logo.PNG"
+                alt="Logo"
+                class="h-10 sm:h-12 lg:h-12 rounded-full"
+              />
+            </a>
+          </div>
+
+          <!-- Links -->
+          <div class="hidden md:flex space-x-8 font-bold">
+            <a href="index.html" class="hover:text-[#f5f5f4]">About</a>
+            <a href="index.html" class="hover:text-[#f5f5f4]">Members</a>
+            <a href="index.html" class="hover:text-[#f5f5f4]">News</a>
+            <a href="index.html" class="hover:text-[#f5f5f4]">Contact</a>
+          </div>
+
+          <!-- Sign In/Sign Up Buttons -->
+          <div class="hidden md:flex space-x-4">
+            <a href="signin.html">
+              <button
+                class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949]"
+              >
+                Sign In
+              </button></a
+            >
+
+            <a href="signup.html"
+              ><button
+                class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
+              >
+                Sign Up
+              </button></a
+            >
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-neutral-light focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+          <a
+            href="index.html"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+            >About</a
+          >
+          <a
+            href="index.html"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+            >Members</a
+          >
+          <a
+            href="index.html"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+            >News</a
+          >
+          <a
+            href="index.html"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+            >Contact</a
+          >
+          <div class="flex flex-col space-y-2 mt-4">
+            <a href="signin.html">
+              <button
+                class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949]"
+              >
+                Sign In
+              </button>
+            </a>
+            <a href="signup.html">
+              <button
+                class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
+              >
+                Sign Up
+              </button>
+            </a>
+          </div>
+        </div>
       </div>
-    </header>
+    </nav>
 
     <!-- News Content -->
     <main class="max-w-4xl mx-auto mt-12 px-6 lg:px-8">
       <!-- News Image -->
       <div class="overflow-hidden rounded-lg shadow-md">
-        <img src="assets/images/news.jpg" alt="News Image" class="w-full" />
+        <img src="assets/images/maneger.jpg" alt="News Image" class="w-full" />
       </div>
 
       <!-- News Title -->
@@ -61,5 +156,15 @@
     <footer class="bg-gray-800 text-gray-400 mt-12 py-6 text-center">
       <p>© 2025 AZCA. All rights reserved.</p>
     </footer>
+
+    <!-- JavaScript for Menu Toggle -->
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
