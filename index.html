@@ -1,17 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/output.css" />
+
+    <link rel="stylesheet" href="src/index.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
     <title>Azca</title>
   </head>
-  <body class="font-sans">
+  <body class="font-sans cairo">
     <nav class="bg-[#B4AC42] shadow-md py-1">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-16">
@@ -35,14 +42,12 @@
           </div>
 
           <!-- Sign In/Sign Up Buttons -->
-          <div
-            class="hidden md:flex space-x-4 motion-preset-float hover:motion-paused"
-          >
+          <div class="hidden md:flex space-x-4 motion-preset-float">
             <a href="signin.html ">
               <button
                 class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949] motion-preset-float hover:motion-paused"
               >
-                Sign In
+                Signin
               </button></a
             >
 
@@ -50,7 +55,7 @@
               ><button
                 class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
               >
-                Sign Up
+                Signup
               </button></a
             >
           </div>
@@ -96,21 +101,21 @@
           <a
             href="#contact"
             class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
-            >Contact</a
+            >Contact Us</a
           >
           <div class="flex flex-col space-y-2 mt-4">
             <a href="signin.html">
               <button
                 class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949]"
               >
-                Sign In
+                Signin
               </button>
             </a>
             <a href="signup.html">
               <button
                 class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
               >
-                Sign Up
+                Signup
               </button>
             </a>
           </div>
@@ -119,12 +124,99 @@
     </nav>
 
     <!-- Heading Section -->
+
     <section
-      class="min-h-screen flex items-center justify-center bg-cover bg-center"
+      class="min-h-screen flex items-center justify-center bg-cover bg-center relative"
     >
-      <div
-        class="text-center px-4 p-6 rounded-md motion-preset- Alzaiem Alazhari Computer Association-[10]"
-      >
+      <div class="animation-container">
+        <canvas id="network-animation"></canvas>
+      </div>
+
+      <style>
+        .animation-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 50%;
+          height: 100%;
+          background: white; /* Dark background */
+          z-index: -1; /* Behind the content */
+        }
+      </style>
+
+      <script>
+        const canvas = document.getElementById("network-animation");
+        const ctx = canvas.getContext("2d");
+        let particles = [];
+
+        function resizeCanvas() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        }
+
+        function Particle(x, y) {
+          this.x = x;
+          this.y = y;
+          this.vx = Math.random() * 1 - 0.5;
+          this.vy = Math.random() * 1 - 0.5;
+        }
+
+        function createParticles() {
+          particles = [];
+          for (let i = 0; i < 100; i++) {
+            particles.push(
+              new Particle(
+                Math.random() * canvas.width,
+                Math.random() * canvas.height
+              )
+            );
+          }
+        }
+
+        function drawParticles() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          ctx.fillStyle = "#ffcc00"; // Glowing yellow nodes
+          ctx.strokeStyle = "#ffcc00"; // Connection lines
+          ctx.lineWidth = 0.2;
+
+          particles.forEach((p, index) => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
+            ctx.fill();
+
+            for (let i = index + 1; i < particles.length; i++) {
+              const p2 = particles[i];
+              const distance = Math.hypot(p.x - p2.x, p.y - p2.y);
+              if (distance < 100) {
+                ctx.globalAlpha = 1 - distance / 100;
+                ctx.beginPath();
+                ctx.moveTo(p.x, p.y);
+                ctx.lineTo(p2.x, p2.y);
+                ctx.stroke();
+              }
+            }
+
+            p.x += p.vx;
+            p.y += p.vy;
+
+            if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+          });
+
+          requestAnimationFrame(drawParticles);
+        }
+
+        window.addEventListener("resize", () => {
+          resizeCanvas();
+          createParticles();
+        });
+
+        resizeCanvas();
+        createParticles();
+        drawParticles();
+      </script>
+
+      <div class="text-center px-4 p-6 rounded-md">
         <h1
           class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-light text-[#2e2e2e]"
         >
@@ -144,7 +236,7 @@
       <h2
         class="text-center text-[#694b2a] lg:text-6xl text-4xl font-bold opacity-75 mb-8"
       >
-        About Us
+        About
       </h2>
       <div
         class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
@@ -152,23 +244,22 @@
         <!-- Text Content -->
         <div>
           <h2
-            class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2e2e2e] mb-4"
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2e2e2e] mb-4 text-left"
           >
-            It's Started 2012
+            it started 2011
           </h2>
-          <p class="text-gray-700 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque
-            vitae ipsum euismod, pellentesque risus sit amet, pharetra felis.
-            Fusce nec lectus non tortor sodales malesuada id ac enim. Vivamus
-            commodo eros et dui placerat, eget tincidunt justo auctor. Etiam
-            dictum magna eu libero ultricies mollis.
+          <p
+            class="text-gray-700 leading-relaxed lg:text-3xl text-2xl text-left"
+          >
+            a story of association born from the womb of suffering it all
+            started 2011 Aldaw Hassan was the founder of Azca , He Nominated to
+            be the president.
           </p>
         </div>
-
         <!-- Image Content -->
         <div>
           <img
-            src="assets/images/Mazen.png"
+            src="assets/images/mr.aldaw.jpg"
             alt="AZCA Founder"
             class="rounded-lg shadow-md"
           />
@@ -179,7 +270,7 @@
     <!-- Members Section -->
     <section id="members" class="py-12 px-6">
       <h2
-        class="text-center text-[#7b6861] lg:text-6xl text-4xl font-bold opacity-75 mb-8"
+        class="text-[#7b6861] lg:text-6xl text-4xl font-bold opacity-75 mb-8 text-center"
       >
         Members
       </h2>
