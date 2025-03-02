@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="src/index.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+      rel="stylesheet"
+    />
+    <title>Azca</title>
+  </head>
+  <body class="font-sans cairo">
+    <nav class="bg-[#B4AC42] shadow-md py-1">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <!-- Logo -->
+          <div class="flex-shrink-0">
+            <a href="#home">
+              <img
+                src="assets/images/azca logo.PNG"
+                alt="Logo"
+                class="h-10 sm:h-12 lg:h-12 rounded-full"
+              />
+            </a>
+          </div>
+
+          <!-- Links -->
+          <div class="hidden md:flex space-x-8 font-bold text-lg">
+            <a href="#about" class="hover:text-[#f5f5f4]">About</a>
+            <a href="#members" class="hover:text-[#f5f5f4]">Members</a>
+            <a href="#news" class="hover:text-[#f5f5f4]">News</a>
+            <a href="#contact" class="hover:text-[#f5f5f4]">Contact</a>
+          </div>
+
+          <!-- <div class="hidden md:flex space-x-4 motion-preset-float">
+            <a href="signin.html ">
+              <button
+                class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949] motion-preset-float hover:motion-paused"
+              >
+                Signin
+              </button></a
+            >
+
+            <a href="signup.html"
+              ><button
+                class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
+              >
+                Signup
+              </button></a
+            >
+          </div> -->
+          <!-- User Info -->
+          <div class="hidden md:flex items-center space-x-4">
+            <img
+              src="assets/images/Mazen.png"
+              alt="User Image"
+              class="h-10 w-10 rounded-full"
+            />
+            <div class="text-white">
+              <p class="font-bold">Username</p>
+            </div>
+          </div>
+          <!-- Mobile Menu -->
+          <div
+            id="mobile-menu"
+            class="hidden md:hidden bg-[#B4AC42] shadow-md py-4 absolute top-16 left-0 w-full z-50"
+          >
+            <a
+              href="#about"
+              class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+              >About</a
+            >
+            <a
+              href="#members"
+              class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+              >Members</a
+            >
+            <a
+              href="#news"
+              class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+              >News</a
+            >
+            <a
+              href="#contact"
+              class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+              >Contact Us</a
+            >
+            <!-- <div class="flex flex-col space-y-2 mt-4 px-4">
+              <a href="signin.html">
+                <button
+                  class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949]"
+                >
+                  Signin
+                </button>
+              </a>
+              <a href="signup.html">
+                <button
+                  class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
+                >
+                  Signup
+                </button>
+              </a>
+            </div> -->
+            <!-- User Info for Mobile -->
+            <div class="flex items-center space-x-4 mt-4 px-4">
+              <img
+                src="assets/images/Mazen.png"
+                alt="User Image"
+                class="h-10 w-10 rounded-full"
+              />
+              <div class="text-neutral-dark">
+                <p class="font-bold">Username</p>
+              </div>
+            </div>
+          </div>
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden">
+            <button id="menu-btn" class="text-neutral-light focus:outline-none">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+          <a
+            href="#about"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+            >About</a
+          >
+          <a
+            href="#members"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+            >Members</a
+          >
+          <a
+            href="#news"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+            >News</a
+          >
+          <a
+            href="#contact"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+            >Contact Us</a
+          >
+          <div class="flex flex-col space-y-2 mt-4">
+            <a href="signin.html">
+              <button
+                class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949]"
+              >
+                Signin
+              </button>
+            </a>
+            <a href="signup.html">
+              <button
+                class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
+              >
+                Signup
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Heading Section -->
+
+    <section
+      class="min-h-screen flex items-center justify-center bg-cover bg-center"
+    >
+      <div class="text-center px-4 p-6 rounded-md">
+        <h1
+          class="text-4xl sm:text-5xl lg:text-6xl font-bold text-neutral-light text-[#2e2e2e]"
+        >
+          Alzaiem Alazhari Computer Association
+        </h1>
+        <br />
+        <h1
+          class="flex justify-center items-center text-2xl sm:text-3xl lg:text-4xl font-bold text-neutral-light text-[#b4ac42]"
+        >
+          "AZCA"
+        </h1>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="bg-[#f5f5f4] py-12 px-6">
+      <h2
+        class="text-[#694b2a] lg:text-6xl text-4xl font-bold opacity-75 mb-8 text-center"
+      >
+        About
+      </h2>
+      <div
+        class="text-center max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6"
+      >
+        <!-- Text Content -->
+        <div>
+          <h2
+            class="text-4xl md:text-5xl lg:text-6xl font-bold text-[#2e2e2e] mb-4 text-left"
+          >
+            it started 2011
+          </h2>
+          <p
+            class="text-gray-700 leading-relaxed lg:text-3xl text-2xl text-left"
+          >
+            a story of association born from the womb of suffering it all
+            started 2011 Aldaw Hussien was the founder of AZCA , He Nominated to
+            be the president.
+          </p>
+        </div>
+        <!-- Image Content -->
+        <div>
+          <img
+            src="assets/images/mr.aldaw.jpg"
+            alt="AZCA Founder"
+            class="rounded-lg shadow-md"
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      #694b2a
+      class="bg-gradient-to-r from-[#694b2a] to-[#2e2e2e] py-16 text-white overflow-hidden"
+    >
+      <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-5xl font-extrabold text-center mb-12">Our Journey</h2>
+        <div class="relative border-l-4 border-white pl-8">
+          <!-- Timeline Item 1 -->
+          <div
+            class="mb-12 relative opacity-0 translate-y-10 transition-transform duration-1000 ease-out"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <span
+              class="absolute -left-4 w-8 h-8 bg-[#FACC15] text-[#1E3A8A] rounded-full flex items-center justify-center text-lg font-bold shadow-md"
+              data-aos="zoom-in"
+              >1</span
+            >
+            <h3 class="md:text-3xl font-semibold pl-7 sm:text-2xl">
+              The Idea of AZCA
+            </h3>
+            <p class="md:text-lg mt-2 sm:text-sm">
+              The idea of ​​the Alzaiem Alzhari Computer Association began
+              because of a problem faced by 10 students of the 16th batch due to
+              their violation of one of the university’s regulations... where
+              the college administration decided to stop the students from
+              graduating with their colleagues.
+            </p>
+            <span class="text-sm mt-1 block opacity-80">Date: 2011</span>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div
+            class="mb-12 relative opacity-0 translate-y-10 transition-transform duration-1000 ease-out"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
+            <span
+              class="absolute -left-4 w-8 h-8 bg-[#FACC15] text-[#1E3A8A] rounded-full flex items-center justify-center text-lg font-bold shadow-md"
+              data-aos="zoom-in"
+              >2</span
+            >
+            <h3 class="md:text-3xl font-semibold pl-7 sm:text-2xl">
+              Foundation
+            </h3>
+            <p class="md:text-lg mt-2 sm:text-sm">
+              The students of the 16th batch decided to hold a sit-in in order
+              to pressure the college administration to regularize the status of
+              their fellow students so that they can graduate with the batch.
+            </p>
+            <span class="text-sm mt-1 block opacity-80">Date: 5Dec-2011</span>
+          </div>
+          <!-- Timeline Item 3 -->
+          <div
+            class="mb-12 relative opacity-0 translate-y-10 transition-transform duration-1000 ease-out"
+            data-aos="fade-up"
+            data-aos-delay="600"
+          >
+            <span
+              class="absolute -left-4 w-8 h-8 bg-[#FACC15] text-[#1E3A8A] rounded-full flex items-center justify-center text-lg font-bold shadow-md"
+              data-aos="zoom-in"
+              >3</span
+            >
+            <h3 class="md:text-3xl font-semibold pl-7 sm:text-2xl">
+              Spark Start
+            </h3>
+            <p class="md:text-lg mt-2 sm:text-sm">
+              The sit-in was successful and the idea of ​​the sit-in led to the
+              establishment of the first general assembly to form a legitimate
+              association.
+            </p>
+            <span class="text-sm mt-1 block opacity-80">Date: 8Dec-2011</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Include AOS (Animate on Scroll) Library -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    </script>
+    <!-- Members Section -->
+    <section id="members" class="py-12 px-6">
+      <h2
+        class="text-[#7b6861] lg:text-6xl text-4xl font-bold opacity-75 mb-8 text-center"
+      >
+        Members
+      </h2>
+      <div
+        class="max-w-7xl max-h-min mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Member Cards -->
+        <!-- Member 1 -->
+        <div
+          class="bg-white rounded-lg border-2 shadow-lg transition-all ease-in border-gray-300 p-4 text-[#2e2e2e] flex flex-col justify-between flex-1 hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1"
+        >
+          <!-- 
+        box-shadow: 10px 10px 0 5px #2e2e2e;
+    transform: translate(10px, 10px); -->
+          <div class="max-h-fit">
+            <img
+              src="assets/images/member 1.jpg"
+              alt="Member 1"
+              class="rounded-t-lg w-full mb-4 max-h-fit"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 1</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Member 1
+              is known for their innovative solutions and dedication to the
+              team.
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 2 -->
+        <div
+          class="bg-white rounded-lg border-2 border-gray-300 p-4 text-[#2e2e2e] flex flex-col justify-around max-h-fit content-around gap-4 hover:shadow-[#2e2e2e] hover:-translate-y-2 shadow-lg transition-all ease-in"
+        >
+          <div class="">
+            <img
+              src="assets/images/member2.jpg"
+              alt="Member 2"
+              class="rounded-t-lg w-full mb-4 max-h-fit"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 2</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Quisque vitae ipsum euismod, pellentesque risus sit amet, pharetra
+              felis. Member 2 has a strong background in leadership and
+              management.
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Member 3 -->
+        <div
+          class="bg-white rounded-lg shadow-lg border-2 border-gray-300 p-4 text-black flex flex-col justify-between hover:shadow-[#2e2e2e] hover:translate-x-2 transition-all ease-linear"
+        >
+          <div class="max-h-fit">
+            <img
+              src="assets/images/member3.jpg"
+              alt="Member 3"
+              class="rounded-t-lg w-full mb-4 max-h-fit"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 3</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Fusce nec lectus non tortor sodales malesuada id ac enim. Member 3
+              contributes expertise in coding and technical support.
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" target="_blank" class="text-black hover:text-gray-700">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="bg-[#f5f5f4] py-8 px-4">
+      <h2
+        class="text-center text-[#694b2a] lg:text-5xl text-3xl font-bold opacity-75 mb-6"
+      >
+        News
+      </h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Main News Item -->
+        <a
+          href="event.html"
+          class="col-span-2 md:col-span-1 bg-white rounded-lg shadow-md border-2 p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg block"
+        >
+          <img
+            src="assets/images/event.jpeg"
+            alt="Main News"
+            class="rounded-t-lg w-full mb-3 max-h-48"
+          />
+          <h3 class="text-xl font-bold mb-2 text-[#694b2a]">
+            Main Headline News
+          </h3>
+          <p class="text-sm text-gray-600 mb-2">Date: January 20, 2025</p>
+          <p class="text-gray-700 text-sm">
+            This is the main news headline with a brief overview of the story.
+          </p>
+        </a>
+
+        <!-- Smaller News Items -->
+        <div
+          class="col-span-2 md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4"
+        >
+          <!-- Small News Item 1 -->
+          <a
+            href="news-one.html"
+            class="bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg block"
+          >
+            <img
+              src="assets/images/maneger.jpg"
+              alt="News 1"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 1
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: February 10, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the first smaller news item.
+            </p>
+          </a>
+
+          <!-- Small News Item 2 -->
+          <a
+            href="news-two.html"
+            class="bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg block"
+          >
+            <img
+              src="assets/images/news.jpg"
+              alt="News 2"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 2
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: March 15, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the second smaller news item.
+            </p>
+          </a>
+
+          <!-- Small News Item 3 -->
+          <a
+            href="news-three.html"
+            class="bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg block"
+          >
+            <img
+              src="assets/images/azca.jpg"
+              alt="News 3"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 3
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: April 5, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the third smaller news item.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="bg-[#2e2e2e] text-gray-100 py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Footer Section 1 -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <p>
+              Email:
+              <a href="mailto:azca@example.com" class="underline"
+                >azca@example.com</a
+              >
+            </p>
+            <p>Phone: +249 123 456 789</p>
+            <p>Address: Khartoum, Sudan</p>
+          </div>
+
+          <!-- Footer Section 2 -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul>
+              <li><a href="#about" class="hover:underline">About</a></li>
+              <li><a href="#members" class="hover:underline">Members</a></li>
+              <li><a href="#news" class="hover:underline">News</a></li>
+              <li><a href="#contact" class="hover:underline">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Section 3 -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Follow Us</h3>
+            <div class="flex space-x-4">
+              <a href="#" class="hover:text-[#b4ac42]"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" class="hover:text-[#b4ac42]"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" class="hover:text-[#b4ac42]"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="hover:text-[#b4ac42]"
+                ><i class="fab fa-linkedin"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
