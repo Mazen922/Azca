@@ -366,40 +366,40 @@
     </section>
 
     <!-- News Section -->
-    <section id="news" class="bg-[#f5f5f4] py-8 px-4">
+    <section id="news" class="bg-[#f5f5f4] py-8 px-4 relative overflow-hidden">
       <h2
         class="text-center text-[#694b2a] lg:text-5xl text-3xl font-bold opacity-75 mb-6"
       >
         News
       </h2>
-      <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Main News Item -->
-        <a
-          href="event.html"
-          class="col-span-2 md:col-span-1 bg-white rounded-lg shadow-md border-2 p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg block"
-        >
-          <img
-            src="assets/images/event.jpeg"
-            alt="Main News"
-            class="rounded-t-lg w-full mb-3 max-h-48"
-          />
-          <h3 class="text-xl font-bold mb-2 text-[#694b2a]">
-            Main Headline News
-          </h3>
-          <p class="text-sm text-gray-600 mb-2">Date: January 20, 2025</p>
-          <p class="text-gray-700 text-sm">
-            This is the main news headline with a brief overview of the story.
-          </p>
-        </a>
-
-        <!-- Smaller News Items -->
+      <div class="relative">
         <div
-          class="col-span-2 md:col-span-2 grid grid-cols-1 sm:grid-cols-3 gap-4"
+          id="news-container"
+          class="news-scroll flex space-x-6 overflow-hidden whitespace-nowrap"
         >
-          <!-- Small News Item 1 -->
+          <!-- Main News Item -->
+          <a
+            href="event.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/event.jpeg"
+              alt="Main News"
+              class="rounded-t-lg w-full mb-3 max-h-48"
+            />
+            <h3 class="text-xl font-bold mb-2 text-[#694b2a]">
+              Main Headline News
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">Date: January 20, 2025</p>
+            <p class="text-gray-700 text-sm">
+              This is the main news headline with a brief overview of the story.
+            </p>
+          </a>
+
+          <!-- Smaller News Items -->
           <a
             href="news-one.html"
-            class="bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg block"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
             <img
               src="assets/images/maneger.jpg"
@@ -415,10 +415,9 @@
             </p>
           </a>
 
-          <!-- Small News Item 2 -->
           <a
             href="news-two.html"
-            class="bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg block"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
             <img
               src="assets/images/news.jpg"
@@ -434,10 +433,82 @@
             </p>
           </a>
 
-          <!-- Small News Item 3 -->
           <a
             href="news-three.html"
-            class="bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg block"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/azca.jpg"
+              alt="News 3"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 3
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: April 5, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the third smaller news item.
+            </p>
+          </a>
+
+          <!-- Duplicate items for seamless looping -->
+          <a
+            href="event.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/event.jpeg"
+              alt="Main News"
+              class="rounded-t-lg w-full mb-3 max-h-48"
+            />
+            <h3 class="text-xl font-bold mb-2 text-[#694b2a]">
+              Main Headline News
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">Date: January 20, 2025</p>
+            <p class="text-gray-700 text-sm">
+              This is the main news headline with a brief overview of the story.
+            </p>
+          </a>
+
+          <a
+            href="news-one.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/maneger.jpg"
+              alt="News 1"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 1
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: February 10, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the first smaller news item.
+            </p>
+          </a>
+
+          <a
+            href="news-two.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/news.jpg"
+              alt="News 2"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 2
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: March 15, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the second smaller news item.
+            </p>
+          </a>
+
+          <a
+            href="news-three.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
           >
             <img
               src="assets/images/azca.jpg"
@@ -456,6 +527,176 @@
       </div>
     </section>
 
+    <style>
+      .news-scroll {
+        display: flex;
+        animation: scroll 20s linear infinite;
+      }
+
+      .news-item {
+        flex: 0 0 auto;
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      #news-container {
+        display: flex;
+        width: 200%;
+      }
+
+      #news-container::after {
+        content: "";
+        display: block;
+        width: 100%;
+      }
+    </style>
+    <!-- Events Section -->
+    <section id="events" class="bg-[#f5f5f4] py-12 px-6">
+      <h2
+        class="text-[#694b2a] lg:text-6xl text-4xl font-bold opacity-75 mb-8 text-center"
+      >
+        Events
+      </h2>
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      >
+        <!-- Event 1 -->
+        <div
+          class="bg-white rounded-lg border-2 shadow-lg p-4 text-[#2e2e2e] flex flex-col justify-between hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1 transition-all ease-in"
+        >
+          <div class="max-h-fit">
+            <img
+              src="assets/images/Event_one.jpg"
+              alt="Event 1"
+              class="rounded-t-lg w-full mb-4 object-cover h-64 object-top"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Event Title 1</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Brief description of the event. Date: March 20, 2025
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div
+          class="bg-white rounded-lg border-2 shadow-lg p-4 text-[#2e2e2e] flex flex-col justify-between hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1 transition-all ease-in"
+        >
+          <div class="max-h-fit">
+            <img
+              src="assets/images/Event_two.jpg"
+              alt="Event 2"
+              class="rounded-t-lg w-full mb-4 object-cover h-64 object-top"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Event Title 2</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Brief description of the event. Date: April 15, 2025
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700"
+              >Read More</a
+            >
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div
+          class="bg-white rounded-lg border-2 shadow-lg p-4 text-[#2e2e2e] flex flex-col justify-between hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1 transition-all ease-in"
+        >
+          <div class="max-h-fit">
+            <img
+              src="assets/images/Event_three.jpg"
+              alt="Event 3"
+              class="rounded-t-lg w-full mb-4 object-cover h-64 object-top"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Event Title 3</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Brief description of the event. Date: May 10, 2025
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <!-- Event 4 -->
+        <div
+          class="bg-white rounded-lg border-2 shadow-lg p-4 text-[#2e2e2e] flex flex-col justify-between hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1 transition-all ease-in"
+        >
+          <div class="max-h-fit">
+            <img
+              src="assets/images/Event_four.jpg"
+              alt="Event 3"
+              class="rounded-t-lg w-full mb-4 object-cover h-64 object-top"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Event Title 3</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Brief description of the event. Date: May 10, 2025
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <!-- Event 5 -->
+        <div
+          class="bg-white rounded-lg border-2 shadow-lg p-4 text-[#2e2e2e] flex flex-col justify-between hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1 transition-all ease-in"
+        >
+          <div class="max-h-fit">
+            <img
+              src="assets/images/taditional-day.jpg"
+              alt="Event 3"
+              class="rounded-t-lg w-full mb-4 object-cover h-64 object-top"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Event Title 3</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Brief description of the event. Date: May 10, 2025
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700"
+              >Read More</a
+            >
+          </div>
+        </div>
+        <!-- Event 6 -->
+        <div
+          class="bg-white rounded-lg border-2 shadow-lg p-4 text-[#2e2e2e] flex flex-col justify-between hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1 transition-all ease-in"
+        >
+          <div class="max-h-fit">
+            <img
+              src="assets/images/workshop.jpg"
+              alt="Event 3"
+              class="rounded-t-lg w-full mb-4 object-cover h-64 object-top"
+            />
+            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Event Title 3</h3>
+            <p class="text-gray-700 text-sm mb-4">
+              Brief description of the event. Date: May 10, 2025
+            </p>
+          </div>
+          <div class="flex justify-center space-x-4 mt-4">
+            <a href="#" target="_blank" class="text-black hover:text-gray-700"
+              >Read More</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
     <footer id="contact" class="bg-[#2e2e2e] text-gray-100 py-8">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in">
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">

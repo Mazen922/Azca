@@ -59,89 +59,78 @@
             >
           </div> -->
           <!-- User Info -->
-          <div class="hidden md:flex items-center space-x-4">
-            <img
-              src="assets/images/Mazen.png"
-              alt="User Image"
-              class="h-10 w-10 rounded-full"
-            />
-            <div class="text-white">
-              <p class="font-bold">Username</p>
-            </div>
-          </div>
-          <!-- Mobile Menu -->
-          <div
-            id="mobile-menu"
-            class="hidden md:hidden bg-[#B4AC42] shadow-md py-4 absolute top-16 left-0 w-full z-50"
-          >
-            <a
-              href="#about"
-              class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
-              >About</a
-            >
-            <a
-              href="#members"
-              class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
-              >Members</a
-            >
-            <a
-              href="#news"
-              class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
-              >News</a
-            >
-            <a
-              href="#contact"
-              class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
-              >Contact Us</a
-            >
-            <!-- <div class="flex flex-col space-y-2 mt-4 px-4">
-              <a href="signin.html">
-                <button
-                  class="bg-[#2e2e2e] text-white px-4 py-2 rounded hover:bg-[#494949]"
-                >
-                  Signin
-                </button>
-              </a>
-              <a href="signup.html">
-                <button
-                  class="bg-[#694b2a] text-white px-4 py-2 rounded hover:bg-[#8c693d]"
-                >
-                  Signup
-                </button>
-              </a>
-            </div> -->
-            <!-- User Info for Mobile -->
-            <div class="flex items-center space-x-4 mt-4 px-4">
-              <img
-                src="assets/images/Mazen.png"
-                alt="User Image"
-                class="h-10 w-10 rounded-full"
-              />
-              <div class="text-neutral-dark">
-                <p class="font-bold">Username</p>
-              </div>
-            </div>
-          </div>
-          <!-- Mobile Menu Button -->
-          <div class="md:hidden">
-            <button id="menu-btn" class="text-neutral-light focus:outline-none">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M4 6h16M4 12h16m-7 6h7"
-                />
-              </svg>
-            </button>
-          </div>
-        </div>
+<div class="hidden md:flex items-center space-x-4 relative">
+  <img
+    src="assets/images/Mazen.png"
+    alt="User Image"
+    class="h-10 w-10 rounded-full"
+  />
+  <div class="text-white relative">
+    <button id="user-menu-btn" class="font-bold focus:outline-none">
+      Username
+    </button>
+    <div
+      id="user-menu"
+      class="hidden absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-2 z-20"
+    >
+      <a
+        href="#"
+        class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+        >Profile</a
+      >
+      <a
+        href="#"
+        class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+        >Settings</a
+      >
+      <a
+        href="logout.html"
+        class="block px-4 py-2 text-gray-800 hover:bg-gray-100"
+        >Logout</a
+      >
+    </div>
+  </div>
+</div>
+
+<!-- Mobile Menu -->
+<div
+  id="mobile-menu"
+  class="hidden md:hidden bg-[#B4AC42] shadow-md py-4 absolute top-16 left-0 w-full z-50"
+>
+  <a
+    href="#about"
+    class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+    >About</a
+  >
+  <a
+    href="#members"
+    class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+    >Members</a
+  >
+  <a
+    href="#news"
+    class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+    >News</a
+  >
+  <a
+    href="#contact"
+    class="block py-2 px-4 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
+    >Contact Us</a
+  >
+  <!-- User Info for Mobile -->
+  <div class="flex items-center space-x-4 mt-4 px-4">
+    <img
+      src="assets/images/Mazen.png"
+      alt="User Image"
+      class="h-10 w-10 rounded-full"
+    />
+    <div class="text-neutral-dark">
+      <p class="font-bold">Username</p>
+    </div>
+  </div>
+</div>
+
+
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden">
@@ -325,119 +314,107 @@
         once: true,
       });
     </script>
-    <!-- Members Section -->
-    <section id="members" class="py-12 px-6">
-      <h2
-        class="text-[#7b6861] lg:text-6xl text-4xl font-bold opacity-75 mb-8 text-center"
-      >
-        Members
-      </h2>
-      <div
-        class="max-w-7xl max-h-min mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
-      >
-        <!-- Member Cards -->
-        <!-- Member 1 -->
-        <div
-          class="bg-white rounded-lg border-2 shadow-lg transition-all ease-in border-gray-300 p-4 text-[#2e2e2e] flex flex-col justify-between flex-1 hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1"
-        >
-          <!-- 
-        box-shadow: 10px 10px 0 5px #2e2e2e;
-    transform: translate(10px, 10px); -->
-          <div class="max-h-fit">
-            <img
-              src="assets/images/member 1.jpg"
-              alt="Member 1"
-              class="rounded-t-lg w-full mb-4 max-h-fit"
-            />
-            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 1</h3>
-            <p class="text-gray-700 text-sm mb-4">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Member 1
-              is known for their innovative solutions and dedication to the
-              team.
-            </p>
-          </div>
-          <div class="flex justify-center space-x-4 mt-4">
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Member 2 -->
-        <div
-          class="bg-white rounded-lg border-2 border-gray-300 p-4 text-[#2e2e2e] flex flex-col justify-around max-h-fit content-around gap-4 hover:shadow-[#2e2e2e] hover:-translate-y-2 shadow-lg transition-all ease-in"
-        >
-          <div class="">
-            <img
-              src="assets/images/member2.jpg"
-              alt="Member 2"
-              class="rounded-t-lg w-full mb-4 max-h-fit"
-            />
-            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 2</h3>
-            <p class="text-gray-700 text-sm mb-4">
-              Quisque vitae ipsum euismod, pellentesque risus sit amet, pharetra
-              felis. Member 2 has a strong background in leadership and
-              management.
-            </p>
-          </div>
-          <div class="flex justify-center space-x-4 mt-4">
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- Member 3 -->
-        <div
-          class="bg-white rounded-lg shadow-lg border-2 border-gray-300 p-4 text-black flex flex-col justify-between hover:shadow-[#2e2e2e] hover:translate-x-2 transition-all ease-linear"
-        >
-          <div class="max-h-fit">
-            <img
-              src="assets/images/member3.jpg"
-              alt="Member 3"
-              class="rounded-t-lg w-full mb-4 max-h-fit"
-            />
-            <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Member 3</h3>
-            <p class="text-gray-700 text-sm mb-4">
-              Fusce nec lectus non tortor sodales malesuada id ac enim. Member 3
-              contributes expertise in coding and technical support.
-            </p>
-          </div>
-          <div class="flex justify-center space-x-4 mt-4">
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-twitter"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-linkedin-in"></i>
-            </a>
-            <a href="#" target="_blank" class="text-black hover:text-gray-700">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
+<!-- Members Section -->
+<section id="members" class="py-12 px-6">
+  <h2
+    class="text-[#7b6861] lg:text-6xl text-4xl font-bold opacity-75 mb-8 text-center"
+  >
+    Members
+  </h2>
+  <div
+    class="max-w-7xl max-h-min mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+  >
+    <!-- Member Cards -->
+    <!-- Member 1 -->
+    <div
+      class="bg-white rounded-lg border-2 shadow-lg transition-all ease-in border-gray-300 p-4 text-[#2e2e2e] flex flex-col justify-between flex-1 hover:shadow-[#2e2e2e] hover:-translate-x-1 hover:-translate-y-1"
+    >
+      <div class="max-h-fit">
+        <img
+          src="assets/images/member 1.jpg"
+          alt="Member 1"
+          class="rounded-t-lg w-full mb-4 object-cover h-96 object-top"
+        />
+        <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">
+          Mohammed Gamar
+        </h3>
+        <p class="text-gray-700 text-sm mb-4">The President of AZCA</p>
       </div>
-    </section>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Member 2 -->
+    <div
+      class="bg-white rounded-lg border-2 border-gray-300 p-4 text-[#2e2e2e] flex flex-col content-around gap-4 hover:shadow-[#2e2e2e] hover:-translate-y-2 shadow-lg transition-all ease-in"
+    >
+      <div class="">
+        <img
+          src="assets/images/member2.jpg"
+          alt="Member 2"
+          class="rounded-t-lg w-full mb-4 object-cover h-96 object-top"
+        />
+        <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Mobaark Ahmed</h3>
+        <p class="text-gray-700 text-sm mb-4">The Vice President of AZCA</p>
+      </div>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Member 3 -->
+    <div
+      class="bg-white rounded-lg shadow-lg border-2 border-gray-300 p-4 text-black flex flex-col justify-between hover:shadow-[#2e2e2e] hover:translate-x-2 transition-all ease-linear"
+    >
+      <div class="max-h-fit">
+        <img
+          src="assets/images/member3.jpg"
+          alt="Member 3"
+          class="rounded-t-lg w-full mb-4 object-cover h-96 object-top"
+        />
+        <h3 class="text-lg font-bold text-[#2e2e2e] mb-2">Ahmed Ali</h3>
+        <p class="text-gray-700 text-sm mb-4">The Secretary of AZCA</p>
+      </div>
+      <div class="flex justify-center space-x-4 mt-4">
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="#" target="_blank" class="text-black hover:text-gray-700">
+          <i class="fab fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- News Section -->
     <section id="news" class="bg-[#f5f5f4] py-8 px-4">
@@ -580,12 +557,14 @@
     </footer>
 
     <script>
-      const menuBtn = document.getElementById("menu-btn");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
+      document.getElementById('menu-toggle').addEventListener('click', function () {
+          document.getElementById('mobile-menu').classList.toggle('hidden');
       });
-    </script>
+
+      document.getElementById('user-menu-btn').addEventListener('click', function () {
+          document.getElementById('user-menu').classList.toggle('hidden');
+      });
+  </script>
+  
   </body>
 </html>
