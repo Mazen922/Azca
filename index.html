@@ -85,22 +85,22 @@
         <div id="mobile-menu" class="hidden md:hidden">
           <a
             href="#about"
-            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
             >About</a
           >
           <a
             href="#members"
-            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
             >Members</a
           >
           <a
             href="#news"
-            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
             >News</a
           >
           <a
             href="#contact"
-            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light"
+            class="block py-2 text-neutral-dark hover:bg-[#694b2a] hover:text-neutral-light underline"
             >Contact Us</a
           >
           <div class="flex flex-col space-y-2 mt-4">
@@ -375,7 +375,7 @@
       <div class="relative">
         <div
           id="news-container"
-          class="news-scroll flex space-x-6 overflow-x-auto whitespace-nowrap scroll-smooth"
+          class="news-scroll flex space-x-6 overflow-hidden whitespace-nowrap"
         >
           <!-- Main News Item -->
           <a
@@ -450,36 +450,82 @@
               A brief description of the third smaller news item.
             </p>
           </a>
+
+          <!-- Duplicate items for seamless looping -->
+          <a
+            href="event.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-4 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/event.jpeg"
+              alt="Main News"
+              class="rounded-t-lg w-full mb-3 max-h-48"
+            />
+            <h3 class="text-xl font-bold mb-2 text-[#694b2a]">
+              Main Headline News
+            </h3>
+            <p class="text-sm text-gray-600 mb-2">Date: January 20, 2025</p>
+            <p class="text-gray-700 text-sm">
+              This is the main news headline with a brief overview of the story.
+            </p>
+          </a>
+
+          <a
+            href="news-one.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/maneger.jpg"
+              alt="News 1"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 1
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: February 10, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the first smaller news item.
+            </p>
+          </a>
+
+          <a
+            href="news-two.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/news.jpg"
+              alt="News 2"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 2
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: March 15, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the second smaller news item.
+            </p>
+          </a>
+
+          <a
+            href="news-three.html"
+            class="news-item bg-white rounded-lg shadow-md border-2 p-3 transform transition duration-300 hover:scale-105 hover:shadow-lg inline-block"
+          >
+            <img
+              src="assets/images/azca.jpg"
+              alt="News 3"
+              class="rounded-t-lg w-full mb-2 max-h-40"
+            />
+            <h4 class="text-md font-semibold mb-1 text-[#2e2e2e]">
+              News Title 3
+            </h4>
+            <p class="text-xs text-gray-600 mb-1">Date: April 5, 2025</p>
+            <p class="text-gray-700 text-sm">
+              A brief description of the third smaller news item.
+            </p>
+          </a>
         </div>
       </div>
     </section>
-
-    <style>
-      .news-scroll {
-        display: flex;
-        animation: scroll 20s linear infinite;
-      }
-
-      .news-item {
-        flex: 0 0 auto;
-      }
-
-      @keyframes scroll {
-        0% {
-          transform: translateX(0);
-        }
-        100% {
-          transform: translateX(-50%);
-        }
-      }
-
-      /* Disable animation on smaller screens */
-      @media (max-width: 768px) {
-        .news-scroll {
-          animation: none;
-        }
-      }
-    </style>
 
     <style>
       .news-scroll {
